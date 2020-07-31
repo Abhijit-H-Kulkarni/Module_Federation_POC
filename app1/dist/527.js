@@ -1,0 +1,1 @@
+(window.webpackJsonp_typescript_app2=window.webpackJsonp_typescript_app2||[]).push([[527],{527:(p,t,e)=>{"use strict";e.r(t),e.d(t,{default:()=>s});var c=e(73);const s=()=>c.createElement("img",{alt:"Puppy",src:"https://cdn.glitch.com/a84f63e5-62cd-456b-89f4-c2adddc4e575%2Fpupper.jpeg?1552581003517",style:{width:"100px",height:"100px"}})}}]);

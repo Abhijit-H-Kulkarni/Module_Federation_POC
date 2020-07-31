@@ -1,0 +1,1 @@
+(window.webpackJsonp_typescript_app2=window.webpackJsonp_typescript_app2||[]).push([[837],{837:(p,t,e)=>{"use strict";e.r(t),e.d(t,{default:()=>c});var a=e(73);const c=()=>a.createElement("img",{alt:"Thumbnail",src:"https://via.placeholder.com/600/8985dc",style:{width:"100px",height:"100px"}})}}]);
