@@ -43,6 +43,9 @@ module.exports = {
         app1: "app1@http://localhost:3001/remoteEntry.js",
         app2: "app2@http://localhost:3002/remoteEntry.js",
       },
+      exposes: {
+        "./App3": "./src/App"
+      },
       shared: {
         "react": {
           requiredVersion: "^16.13.0",

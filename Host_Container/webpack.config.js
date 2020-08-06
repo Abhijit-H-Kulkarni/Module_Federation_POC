@@ -1,46 +1,62 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack").container
+  .ModuleFederationPlugin;
+const path = require("path");
 
 module.exports = {
+  entry: "./src/index",
+  mode: "development",
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    port: 8080,
+  },
   output: {
     publicPath: "http://localhost:8080/",
   },
-
   resolve: {
-    extensions: [".jsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js"],
   },
-
-  devServer: {
-    port: 8080,
-  },
-
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /bootstrap\.tsx$/,
+        loader: "bundle-loader",
+        options: {
+          lazy: true,
+        },
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
+        loader: "babel-loader",
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-react", "@babel/preset-typescript"],
         },
       },
     ],
   },
-
   plugins: [
     new ModuleFederationPlugin({
       name: "Host_Container",
-      library: { type: "var", name: "starter" },
       filename: "remoteEntry.js",
-      remotes: {},
-      exposes: {},
-      shared: require("./package.json").dependencies,
+      remotes: {
+        app3: "app3@http://localhost:3003/remoteEntry.js",
+      },
+      shared: {
+        "react": {
+          requiredVersion: "^16.13.0",
+          singleton: true,
+          strictVersion: true,
+        },
+        "react-dom": {
+          requiredVersion: "^16.13.0",
+          singleton: true,
+          strictVersion: true,
+        }
+      },
     }),
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
     }),
   ],
 };

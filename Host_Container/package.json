@@ -1,31 +1,33 @@
 {
-  "name": "wp5-starter-react",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
-    "start": "npm build && webpack-dev-server --open --mode development",
-    "start:live": "webpack-dev-server --open --mode development --liveReload"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
-  },
+  "name": "@typescript/app3",
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "7.9.4",
+    "@babel/core": "7.10.5",
+    "@babel/preset-react": "7.10.4",
+    "@babel/preset-typescript": "7.10.4",
+    "@types/react": "16.9.43",
+    "@types/react-dom": "16.9.8",
     "babel-loader": "8.1.0",
-    "css-loader": "^3.5.3",
+    "bundle-loader": "0.5.6",
     "html-webpack-plugin": "git://github.com/ScriptedAlchemy/html-webpack-plugin#master",
-    "style-loader": "1.2.1",
+    "serve": "11.3.2",
+    "typescript": "3.9.7",
     "webpack": "5.0.0-beta.22",
-    "webpack-cli": "3.3.11",
+    "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"
   },
+  "scripts": {
+    "start": "npm run build && webpack-dev-server",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3003",
+    "clean": "rm -rf dist"
+  },
   "dependencies": {
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "@types/react-router-dom": "^5.1.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.2.0",
+    "wikilogos": "^1.0.0"
   }
 }
