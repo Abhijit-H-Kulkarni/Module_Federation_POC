@@ -1,1 +1,0 @@
-(window.webpackJsonp_typescript_app2=window.webpackJsonp_typescript_app2||[]).push([[727],{727:(p,t,e)=>{"use strict";e.r(t),e.d(t,{default:()=>n});var s=e(294),o=e(963)();o.push(1),o.push(2),o.push(3);const n=()=>(console.log(o),s.createElement("button",null,"App 2 Remote Button"))}}]);

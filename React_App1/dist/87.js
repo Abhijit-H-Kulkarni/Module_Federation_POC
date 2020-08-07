@@ -1,1 +1,0 @@
-(window.webpackJsonp_typescript_app2=window.webpackJsonp_typescript_app2||[]).push([[87],{87:(p,t,n)=>{"use strict";n.r(t),n.d(t,{default:()=>s});var e=n(73);const o=n.e(527).then(n.bind(n,527)),a=e.lazy(()=>o),c=n.e(837).then(n.bind(n,837)),s=[{path:"/comp1",component:a},{path:"/comp2",component:e.lazy(()=>c)}]}}]);
