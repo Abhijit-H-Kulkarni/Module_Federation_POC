@@ -20,14 +20,13 @@
   "scripts": {
     "start": "npm run build && webpack-dev-server",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3003",
+    "serve": "serve dist -p 8080",
     "clean": "rm -rf dist"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.0",
-    "react-router-dom": "^5.2.0",
-    "wikilogos": "^1.0.0"
+    "react-router-dom": "^5.2.0"
   }
 }
