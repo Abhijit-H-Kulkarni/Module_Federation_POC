@@ -1,6 +1,6 @@
 {
-  "name": "@typescript/app3",
-  "version": "0.0.0",
+  "name": "host_container",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "@babel/core": "7.10.5",
@@ -10,11 +10,11 @@
     "@types/react-dom": "16.9.8",
     "babel-loader": "8.1.0",
     "bundle-loader": "0.5.6",
-    "html-webpack-plugin": "git://github.com/ScriptedAlchemy/html-webpack-plugin#master",
+    "html-webpack-plugin": "4.3.0",
     "serve": "11.3.2",
     "typescript": "3.9.7",
-    "webpack": "5.0.0-beta.22",
-    "webpack-cli": "3.3.12",
+    "webpack": "5.0.0-beta.23",
+    "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.11.0"
   },
   "scripts": {
